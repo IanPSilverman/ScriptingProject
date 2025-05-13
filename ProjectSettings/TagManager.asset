@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - FallBox
   - Collectable
+  - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX

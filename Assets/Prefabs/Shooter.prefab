@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2338457480482345730}
   m_Layer: 0
   m_Name: Shooter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,6 +165,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3531356484069620457, guid: 8de85df6920d1f94baf3290514fb0bd9, type: 3}
   shootInterval: 2
   projectileSpeed: 5
+  shootClip: {fileID: 8300000, guid: a052ece027dc7504f8b1ff3d2ea6a28b, type: 3}
+  shootVolume: 0.8
 --- !u!82 &2338457480482345730
 AudioSource:
   m_ObjectHideFlags: 0
@@ -174,7 +176,7 @@ AudioSource:
   m_GameObject: {fileID: 6886872240363830026}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4235116848172783920, guid: 9325da918d7a3f0478c941979f11e4af, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5f6cdc1d8f257d049bcdcf1c207080b0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

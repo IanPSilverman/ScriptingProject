@@ -8,10 +8,14 @@ public class PlayerSoundScript : MonoBehaviour
     public AudioClip jumpClip;
     public List<AudioClip> randomContainerHurt;
     public AudioClip deathClip;
+    public AudioClip collectClip;
+    public AudioClip projectileHitClip;
 
     [Header("Sound Settings")]
     public float jumpVolume = 0.5f;
     public float hurtVolume = 0.5f;
+    public float collectVolume = 0.5f;
+    public float projHitVolume = 0.5f;
 
     private AudioSource _source;
 
@@ -35,6 +39,20 @@ public class PlayerSoundScript : MonoBehaviour
         int index = Random.Range(0, randomContainerHurt.Count);
         _source.clip = randomContainerHurt[index];
         _source.volume = hurtVolume;
+        _source.Play();
+    }
+
+    public void PlayerCollectSound()
+    {
+        _source.clip = collectClip;
+        _source.volume = collectVolume;
+        _source.Play();
+    }
+
+    public void PlayerProjectileHitSound()
+    {
+        _source.clip = projectileHitClip;
+        _source.volume = projHitVolume;
         _source.Play();
     }
 }

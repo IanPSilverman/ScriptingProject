@@ -41,13 +41,23 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectable"))
         {
             collectablesGet++;
-            Debug.Log(collectablesGet);
+            playerSoundSystem.PlayerCollectSound();
             coinGetter.ChangeCoins(collectablesGet.ToString());
 
             if(collectablesGet ==  4)
             {
                 sceneLoader.SwitchScene(2);
             }
+        }
+
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            playerSoundSystem.PlayerRandomHurtSound();
+        }
+
+        if(collision.gameObject.CompareTag("Projectile"))
+        {
+            playerSoundSystem.PlayerProjectileHitSound();
         }
     }
 

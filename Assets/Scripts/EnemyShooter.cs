@@ -9,16 +9,22 @@ public class EnemyShooter : MonoBehaviour
     public float shootInterval = 2f;
     public float projectileSpeed = 5f;
 
+    [Header("Sound Sources")]
+    public AudioClip shootClip;
+
+    [Header("Sound Settings")]
+    public float shootVolume = 0.8f;
+
+    private AudioSource _source;
+
     // Start is called before the first frame update
     void Start()
     {
+        _source = GetComponent<AudioSource>();
+        _source.loop = false;
+        _source.playOnAwake = false;
+
         StartCoroutine(ShootCoroutine());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private IEnumerator ShootCoroutine()
@@ -35,6 +41,10 @@ public class EnemyShooter : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
         {
+            _source.clip = shootClip;
+            _source.volume = shootVolume;
+            _source.Play();
+
             Vector3 direction = (player.transform.position - transform.position).normalized;
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 

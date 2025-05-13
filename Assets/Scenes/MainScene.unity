@@ -693,7 +693,7 @@ Transform:
   m_GameObject: {fileID: 304582688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.72, y: 11.18, z: -0.69}
+  m_LocalPosition: {x: -89.4, y: -0.8, z: -0.69}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1434,8 +1434,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3a6b78dc06f6f5343a337dc5c7d2735c, type: 3}
   - {fileID: 8300000, guid: 66fd41287c30af848af855d18d813370, type: 3}
   deathClip: {fileID: 8300000, guid: 61063d541fb87554d998b564524f76d2, type: 3}
+  collectClip: {fileID: 8300000, guid: 4ca2c8f6483a08a408efec2914859f2c, type: 3}
+  projectileHitClip: {fileID: 8300000, guid: d0334070add18aa47aef19f793277263, type: 3}
   jumpVolume: 0.7
-  hurtVolume: 0.5
+  hurtVolume: 0.8
+  collectVolume: 0.5
+  projHitVolume: 0.8
 --- !u!82 &558130953
 AudioSource:
   m_ObjectHideFlags: 0
