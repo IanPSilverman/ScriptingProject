@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      OneWayPlatform_0: 7338064531737323354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

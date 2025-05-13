@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public int _currentHealth;
 
     public HealthGetter healthGetter;
+    public SceneLoader loader;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (_currentHealth <= 0 )
         {
-            Die();
+            SceneManager.LoadScene(3);
         }
     }
 

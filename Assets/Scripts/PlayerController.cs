@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public int collectablesGet = 0;
 
     public PlayerSoundScript playerSoundSystem;
+    public CoinGetter coinGetter;
+    public SceneLoader sceneLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectable"))
         {
             collectablesGet++;
+            Debug.Log(collectablesGet);
+            coinGetter.ChangeCoins(collectablesGet.ToString());
+
+            if(collectablesGet ==  4)
+            {
+                sceneLoader.SwitchScene(2);
+            }
         }
     }
 

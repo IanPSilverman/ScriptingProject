@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PatrolEnemy_0: 3048663259474500474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
