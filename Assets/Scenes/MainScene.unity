@@ -5515,6 +5515,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3942455236086710357, guid: b834c90817b3cf349a96ab25f8ca0c32, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4366430835176073134, guid: b834c90817b3cf349a96ab25f8ca0c32, type: 3}
       propertyPath: m_Name
       value: PatrollerGroup
@@ -5525,7 +5529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5081436857351924053, guid: b834c90817b3cf349a96ab25f8ca0c32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.28
+      value: 4.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
